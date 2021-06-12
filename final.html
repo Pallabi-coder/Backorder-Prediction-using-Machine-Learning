@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 530px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: White;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <font style="color:Green"><center><h1><b>Backorder Prediction</b></h1></center></font>
+
+
+  <form action="/predict" method="POST">
+    <label for="national_inv">National Inventory</label>
+    <input type="number"  name="national_inv">
+    <br><br>
+    <label for="lead_time">Lead Time</label>
+    <input type="number"  name="lead_time">
+    <br><br>
+    <label for="in_transit_qty">In-transit quantity</label>
+    <input type="number"  name="in_transit_qty">
+    <br><br>
+    <label for="forecast_3_month">forecast_3_month</label>
+    <input type="number"  name="forecast_3_month">
+    <br><br>
+	<label for="forecast_6_month">forecast_6_month</label>
+    <input type="number"  name="forecast_6_month">
+    <br><br>
+    <label for="forecast_9_month">forecast_9_month</label>
+    <input type="number"  name="forecast_9_month">
+    <br><br>
+    <label for="sales_1_month">sales_1_month</label>
+    <input type="number"  name="sales_1_month">
+    <br><br>
+    <label for="sales_3_month">sales_3_month</label>
+    <input type="number" name="sales_3_month">
+    <br><br>
+	<label for="sales_6_month">sales_6_month</label>
+    <input type="number"  name="sales_6_month">
+    <br><br>
+    <label for="sales_9_month">sales_9_month</label>
+    <input type="number" name="sales_9_month">
+    <br><br>
+    <label for=">min_bank">min_bank</label>
+    <input type="number" name="min_bank">
+    <br><br>
+    <label for="pieces_past_due">Pieces past Due</label>
+    <input type="number"  name="pieces_past_due">
+    <br><br>
+	<label for="perf_6_month_avg">perf_6_month_avg</label>
+    <input type="number" name="perf_6_month_avg">
+    <br><br>
+    <label for="perf_12_month_avg">perf_12_month_avg</label>
+    <input type="number" name="perf_12_month_avg">
+    <br><br>
+    <label for="pieces_past_due">local_bo_qty</label>
+    <input type="number" name="pieces_past_due>
+	
+	
+	
+	
+	<p>
+	<label for="deck_risk">deck_risk</label>
+	<select name="deck_risk" id="deck_risk">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    </select></p>
+
+	<p><label for="oe_constraint">oe_constraint</label>
+	<select name="oe_constraint" >
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+    </select></p>
+	
+	<p><label for="ppap_risk">ppap_risk</label>
+	<select name="ppap_risk" >
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+    </select></p>
+	
+	<p><label for="stop_auto_buy">stop_auto_buy</label>
+	<select name="stop_auto_buy" >
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+    </select></p>
+
+	<p><label for="rev_stop">rev_stop</label>
+	<select name="rev_stop" id="rev_stop">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+    </select></p>
+	
+	<p><label for="potential_issue">potential_issue</label>
+	<select name="potential_issue" >
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+    </select></p>
+	<br>
+	
+    <button class="button button1" type="submit" value="Submit">SUBMIT</button>
+  </form>
+</div>
+</body>
+</html>
